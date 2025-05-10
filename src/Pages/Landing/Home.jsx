@@ -8,12 +8,9 @@ const Home = () => {
   return (
     <>
     <Logos />
-    <div className="lg:flex md:flex">
+    <div className="grid md:flex">
       <div className="w-8/12">
-        <Title
-          line={"Hello, My Name is Garvit Thakral"}
-          line2={"& I am a Full Stack MERN Developer"}
-        />
+        <Title />
         <Technologia />
       </div>
       <div className="w-4/12">

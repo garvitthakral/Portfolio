@@ -17,7 +17,7 @@ const Navbar = () => {
       />
       
       {/* Right: Nav Tabs */}
-      <div className="hidden md:flex gap-4 pt-4">
+      <div className="hidden lg:flex gap-4 pt-4">
         <NavLink
           to={"/"}
           className={({ isActive }) => `${isActive ? "text-EPur font-semibold" : ""}`}
@@ -34,7 +34,28 @@ const Navbar = () => {
           </NavLink>
         ))}
       </div>
+      <div className="lg:hidden pt-4" onClick={() => setShowTabs(!showTabs)}>
+        {showTabs ? <MenuIcon style={{ fontSize: 40 }}/> : <MenuIcon style={{ fontSize: 40 }}/>}
+      </div>
       
+      {/* Mobile Menu */}
+      {showTabs && (
+        <>
+        <div className="absolute grid gap-4 bg-black/10 backdrop-blur-md h-100 w-50 rounded-xl p-10 right-15 text-2xl md:right-26 lg:hidden">
+           <NavLink to="/" onClick={() => setShowTabs(false)} className="hover:text-EPur">Home</NavLink>
+          {tabs.map((tab, i) => (
+                 <NavLink
+              key={i}
+              to={`/${tab.toLowerCase()}`}
+              onClick={() => setShowTabs(false)}
+              className="hover:text-EPur"
+            >
+              {tab}
+            </NavLink>     
+          ))}
+        </div>
+        </>
+      )}
     </div>
   );
 };
