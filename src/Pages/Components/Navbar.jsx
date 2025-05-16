@@ -7,7 +7,7 @@ const Navbar = () => {
   const tabs = ["Projects", "Skills", "About", "contact"];
 
   return (
-    <div className="flex justify-between text-lg px-3 py-5 md:py-10 md:px-12 md:text-2xl lg:px-25 lg:text-3xl font-light shadow-2xl ">
+    <div className="flex justify-between bg-black/10  text-lg px-3 py-5 md:py-10 md:px-12 md:text-2xl lg:px-25 lg:text-3xl font-light shadow-2xl ">
       
       {/* Left: Logo */}
       <img

@@ -9,7 +9,7 @@ const Home = () => {
     <>
     <Logos />
     <div className="grid md:flex">
-      <div className="w-8/12">
+      <div className="w-8/12 ">
         <Title />
         <Technologia />
       </div>

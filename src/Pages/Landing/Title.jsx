@@ -2,7 +2,7 @@ import React from 'react'
 
 const Title = () => {
   return ( 
-    <div className='pt-20 flex flex-col items-center'>
+    <div className='pt-37 flex flex-col items-center'>
         <img
         src="https://res.cloudinary.com/dtntjxdio/image/upload/v1746871333/GARVIT_THAKRAL_mxhyeh.png"
         alt="Logo"
