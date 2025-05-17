@@ -1,19 +1,29 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-const About = () => {
+const About = ({ isStandalone = false }) => {
   return (
-    <div>
+    <div className="">
       <img
-        src="https://res.cloudinary.com/dtntjxdio/image/upload/v1747355027/frame_2_jieohf.png"
+        src="https://res.cloudinary.com/dtntjxdio/image/upload/v1747398882/frame_2.2_h5rqip.png"
         alt="background"
-        className="absolute top-0 left-0 w-full h-screen object-cover z-[-1]"
+        className={`${
+          isStandalone
+            ? "absolute top-0 left-0 w-full h-screen object-cover z-[-1]"
+            : "absolute sm:top-[1100px] lg:top-[953px] left-0 w-full h-screen object-cover z-[-1]"
+        }`}
       />
-      <div className="p-10 lg:p-30 w-[500px]  lg:w-[900px] xl:w-[1100px]">
+      <div
+        className={`${
+          isStandalone
+            ? "p-10 lg:p-30 lg:pt-45 w-[500px] lg:w-[900px] xl:w-[1100px]"
+            : "p-10 lg:p-30 sm:pt-90 lg:pt-110 w-[500px] lg:w-[900px] xl:w-[1100px]"
+        }`}
+      >
         <div className="text-7xl">
           <Typewriter
             onInit={(typewriter) => {
-              typewriter.typeString("About Me...").start();
+              typewriter.typeString("About Me...").pauseFor(2000).start();
             }}
             options={{
               autoStart: true,

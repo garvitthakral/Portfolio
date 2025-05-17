@@ -9,6 +9,7 @@ import Express from "../../Models/Express";
 import MongoDB from "../../Models/MongoDB";
 import React3D from "../../Models/React2";
 import Node from "../../Models/Node";
+import GlowingBall from "../Components/GlowingBall";
 
 const Technologia = () => {
   return (
@@ -30,6 +31,9 @@ const Technologia = () => {
         <Environment preset="city" />
         <CameraControls enabled={false} />
       </Canvas>
+      <div className="lg:block sm:hidden absolute z-[-1] left-[-130px]">
+      <GlowingBall color="#8425dc" size={100}/>
+      </div>
     </div>
   );
 };

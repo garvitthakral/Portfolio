@@ -6,6 +6,7 @@ Command: npx gltfjsx@6.5.3 express.glb --draco
 import React, { useRef, useEffect } from "react";
 import { useGLTF, Center } from "@react-three/drei";
 import gsap from "gsap";
+import GlowingBall from "../Pages/Components/GlowingBall";
 
 const Express = (props) => {
   const { nodes, materials } = useGLTF("/public/express.glb");
@@ -27,42 +28,39 @@ const Express = (props) => {
 
   return (
     <group position={[-16, 1.9, -20]}>
-    <Center>
-    <group
-      {...props}
-      dispose={null}
-      ref={(el) => {
-        groupRef.current = el;
-      }}
-    >
-      <group
-        
-        scale={3.2}
-      >
-        <mesh
-          geometry={nodes.Logo_Background.geometry}
-          material={materials["Background_Material.002"]}
-          position={[-1.309, -1.841, 0.873]}
-          rotation={[0, 1.089, 0]}
-          scale={[2.745, 0.275, 2.745]}
-        />
-        <mesh
-          geometry={nodes.e_Text.geometry}
-          material={materials["Text_Material.001"]}
-          position={[-1.691, -1.539, 1.603]}
-          rotation={[Math.PI / 2, 0, -1.089]}
-          scale={2.745}
-        />
-        <mesh
-          geometry={nodes.x_Text.geometry}
-          material={materials["Text_Material.001"]}
-          position={[-0.927, -1.539, 0.143]}
-          rotation={[Math.PI / 2, 0, -1.089]}
-          scale={2.745}
-        />
-      </group>
-    </group>
-    </Center>
+      <Center>
+        <group
+          {...props}
+          dispose={null}
+          ref={(el) => {
+            groupRef.current = el;
+          }}
+        >
+          <group scale={3.2}>
+            <mesh
+              geometry={nodes.Logo_Background.geometry}
+              material={materials["Background_Material.002"]}
+              position={[-1.309, -1.841, 0.873]}
+              rotation={[0, 1.089, 0]}
+              scale={[2.745, 0.275, 2.745]}
+            />
+            <mesh
+              geometry={nodes.e_Text.geometry}
+              material={materials["Text_Material.001"]}
+              position={[-1.691, -1.539, 1.603]}
+              rotation={[Math.PI / 2, 0, -1.089]}
+              scale={2.745}
+            />
+            <mesh
+              geometry={nodes.x_Text.geometry}
+              material={materials["Text_Material.001"]}
+              position={[-0.927, -1.539, 0.143]}
+              rotation={[Math.PI / 2, 0, -1.089]}
+              scale={2.745}
+            />
+          </group>
+        </group>
+      </Center>
     </group>
   );
 };

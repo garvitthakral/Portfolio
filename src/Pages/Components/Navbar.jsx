@@ -1,26 +1,27 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
   const [showTabs, setShowTabs] = useState(false);
   const tabs = ["Projects", "Skills", "About", "contact"];
 
   return (
-    <div className="flex justify-between bg-black/10  text-lg px-3 py-5 md:py-10 md:px-12 md:text-2xl lg:px-25 lg:text-3xl font-light shadow-2xl ">
-      
+    <div className="flex justify-between bg-black/10  text-lg px-3 py-5 md:py-10 md:px-12 md:text-2xl lg:px-25 lg:text-3xl font-light shadow-2xl z-10 ">
       {/* Left: Logo */}
       <img
         src="https://res.cloudinary.com/dtntjxdio/image/upload/v1746854326/DEVLOPMENT_IN_PROCESS_sufuat.png"
         alt="Logo"
         className="w-120"
       />
-      
+
       {/* Right: Nav Tabs */}
       <div className="hidden lg:flex gap-4 pt-4">
         <NavLink
           to={"/"}
-          className={({ isActive }) => `${isActive ? "text-EPur font-semibold" : ""}`}
+          className={({ isActive }) =>
+            `${isActive ? "text-EPin font-semibold" : ""}`
+          }
         >
           Home
         </NavLink>
@@ -28,32 +29,44 @@ const Navbar = () => {
           <NavLink
             key={idx}
             to={`/${tab.toLocaleLowerCase()}`}
-            className={({ isActive }) => ` ${isActive ? "text-EPur font-semibold" : ""}`}
+            className={({ isActive }) =>
+              ` ${isActive ? "text-EPin font-semibold" : ""}`
+            }
           >
             {tab}
           </NavLink>
         ))}
       </div>
       <div className="lg:hidden pt-4" onClick={() => setShowTabs(!showTabs)}>
-        {showTabs ? <MenuIcon style={{ fontSize: 40 }}/> : <MenuIcon style={{ fontSize: 40 }}/>}
+        {showTabs ? (
+          <MenuIcon style={{ fontSize: 40 }} />
+        ) : (
+          <MenuIcon style={{ fontSize: 40 }} />
+        )}
       </div>
-      
+
       {/* Mobile Menu */}
       {showTabs && (
         <>
-        <div className="absolute grid gap-4 bg-black/10 backdrop-blur-md h-100 w-50 rounded-xl p-10 right-15 text-2xl md:right-26 lg:hidden">
-           <NavLink to="/" onClick={() => setShowTabs(false)} className="hover:text-EPur">Home</NavLink>
-          {tabs.map((tab, i) => (
-                 <NavLink
-              key={i}
-              to={`/${tab.toLowerCase()}`}
+          <div className="absolute grid gap-4 bg-black/10 backdrop-blur-md h-100 w-50 rounded-xl p-10 right-15 text-2xl md:right-26 lg:hidden z-10">
+            <NavLink
+              to="/"
               onClick={() => setShowTabs(false)}
-              className="hover:text-EPur"
+              className="hover:text-EPin"
             >
-              {tab}
-            </NavLink>     
-          ))}
-        </div>
+              Home
+            </NavLink>
+            {tabs.map((tab, i) => (
+              <NavLink
+                key={i}
+                to={`/${tab.toLowerCase()}`}
+                onClick={() => setShowTabs(false)}
+                className="hover:text-EPin"
+              >
+                {tab}
+              </NavLink>
+            ))}
+          </div>
         </>
       )}
     </div>
