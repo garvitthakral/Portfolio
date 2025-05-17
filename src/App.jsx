@@ -16,6 +16,7 @@ const App = () => {
         <Route path="/about" element={<About isStandalone={true}/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
+        {/* <Route path="/project/:id" element={<ProjectDetails />} /> */}
         <Route path="/skills" element={<Skills />} />
       </Routes>
     </div>
