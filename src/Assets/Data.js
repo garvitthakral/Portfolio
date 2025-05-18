@@ -10,12 +10,12 @@ const projectsData = [
         description: "A social impact project built during a hackathon, designed to provide the poor and underprivileged with a dignified online shopping experience where they can choose what they need freely, just like any regular shopper.",
         challengesFaced: [
             "Implementing role-based access control with JWT",
-            "Building a complete backend API with authentication",
-            "Designing a clean UI within the hackathon time limit",
+            "complete backend API with authentication",
+            "Clean UI within the hackathon time limit",
         ],
         whatILearned: [
-            "Role-based access control & throughout pages",
-            "Building under pressure, build under 36hr",
+            "Role-based access control",
+            "Building under pressure, 36hr",
             "How to have creative approch for a real world problem",
         ],
         demoLink: "https://www.youtube.com/watch?v=bQaKgMp97EU",
@@ -32,7 +32,7 @@ const projectsData = [
         title: "Stock Pulse - Zerodha clone",
         description: "A 1:1 replica of Zerodha’s stock trading and monitoring platform, developed to enhance my learning of full-stack architecture, real-time data handling, and user experience in financial applications.",
         challengesFaced: [
-            "Designing a clean and intuitive UI to display complex financial data",
+            "Designing a clean UI to display complex financial data",
             "Implementing the logic for buying and selling stocks with proper validations",
             "Dynamically updating the UI based on user orders and real-time data changes"
         ],

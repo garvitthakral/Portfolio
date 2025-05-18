@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 const Tittle = () => {
   return (
     <div>
-      <div className="text-7xl px-40 py-40">
+      <div className="text-7xl px-40 pt-40 pb-30">
         <Typewriter
           onInit={(typewriter) => {
             typewriter.typeString("Projects...").pauseFor(2000).start();

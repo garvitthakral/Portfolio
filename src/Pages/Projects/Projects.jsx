@@ -2,6 +2,7 @@ import React from "react";
 import Tittle from "./Tittle";
 import Card from "./Card";
 import GlowingBall from "../Components/GlowingBall";
+import projectsData from "../../Assets/Data";
 
 const Projects = () => {
   return (
@@ -16,8 +17,10 @@ const Projects = () => {
       <GlowingBall color="#d022d0"/>
       </div>
       <Tittle />
-      <div>
-        <Card />
+      <div className="flex flex-wrap justify-center gap-6 lg:gap-16 w-full">
+        {projectsData.map((project, idx) => (
+          <Card key={idx} project={project}/>
+        ))}
       </div>
     </div>
   );
