@@ -7,6 +7,7 @@ import Contact from "./Pages/Contact/Contact";
 import Projects from "./Pages/Projects/Projects";
 import Skills from "./Pages/Skills/Skills";
 import ProjectDetails from "./Pages/Projects/ProjectDetails";
+import Fotter from "./Pages/Components/Fotter";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/projects/:id" element={<ProjectDetails />} />
         <Route path="/skills" element={<Skills />} />
       </Routes>
+      <Fotter />
     </div>
   );
 };

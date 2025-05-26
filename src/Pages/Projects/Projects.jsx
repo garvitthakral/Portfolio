@@ -17,7 +17,7 @@ const Projects = () => {
       <GlowingBall color="#d022d0"/>
       </div>
       <Tittle />
-      <div className="flex flex-wrap justify-center gap-6 lg:gap-16 w-full">
+      <div className="flex flex-wrap justify-center gap-6 lg:gap-16 w-full pb-10">
         {projectsData.map((project, idx) => (
           <Card key={idx} project={project}/>
         ))}

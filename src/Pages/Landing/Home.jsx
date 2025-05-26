@@ -10,6 +10,7 @@ import GlowingBall from "../Components/GlowingBall";
 import { NavLink } from "react-router-dom";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import Social from "./Social";
+import CurrentTech from "./CurrentTech";
 
 const Home = () => {
   return (
@@ -47,6 +48,9 @@ const Home = () => {
           </div>
           <div className="py-10 flex justify-center">
           <NavLink to={"/projects"} className={"px-4 py-3 bg-EPin rounded-2xl"}>View all<ArrowForwardIosIcon fontSize="small" className="pl-2"/></NavLink></div>
+        </div>
+        <div className="pt-19 px-35 w-full">
+          <CurrentTech />
         </div>
       </div>
     </>
