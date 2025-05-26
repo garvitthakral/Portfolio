@@ -8,7 +8,7 @@ import { useGLTF, Center } from "@react-three/drei";
 import gsap from "gsap";
 
 const React3D = (props) => {
-  const { nodes, materials } = useGLTF("/public/react2.glb");
+  const { nodes, materials } = useGLTF("/react2.glb");
 
   const groupRef = useRef();
 
@@ -54,4 +54,4 @@ const React3D = (props) => {
 
 export default React3D;
 
-useGLTF.preload("/public/react2.glb");
+useGLTF.preload("/react2.glb");

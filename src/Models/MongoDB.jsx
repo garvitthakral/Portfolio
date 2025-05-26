@@ -8,7 +8,7 @@ import { useGLTF, Center } from "@react-three/drei";
 import gsap from "gsap";
 
 const MongoDB = (props) => {
-  const { nodes, materials } = useGLTF("/public/MongoDB.glb");
+  const { nodes, materials } = useGLTF("/MongoDB.glb");
 
   const groupRef = useRef();
 
@@ -66,4 +66,4 @@ const MongoDB = (props) => {
 
 export default MongoDB;
 
-useGLTF.preload("/public/MongoDB.glb");
+useGLTF.preload("/MongoDB.glb");

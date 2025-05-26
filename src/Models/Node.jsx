@@ -8,7 +8,7 @@ import { useGLTF, Center } from "@react-three/drei";
 import gsap from "gsap";
 
 const Node = (props) => {
-  const { nodes, materials } = useGLTF("/public/node.glb");
+  const { nodes, materials } = useGLTF("/node.glb");
 
   const groupRef = useRef();
 
@@ -51,4 +51,4 @@ const Node = (props) => {
 
 export default Node;
 
-useGLTF.preload("/public/node.glb");
+useGLTF.preload("/node.glb");

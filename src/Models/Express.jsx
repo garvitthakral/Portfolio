@@ -9,7 +9,7 @@ import gsap from "gsap";
 import GlowingBall from "../Pages/Components/GlowingBall";
 
 const Express = (props) => {
-  const { nodes, materials } = useGLTF("/public/express.glb");
+  const { nodes, materials } = useGLTF("/express.glb");
 
   const groupRef = useRef();
 
@@ -67,4 +67,4 @@ const Express = (props) => {
 
 export default Express;
 
-useGLTF.preload("/public/express.glb");
+useGLTF.preload("/express.glb");
